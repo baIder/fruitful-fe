@@ -1,9 +1,10 @@
-import chart from "../../assets/icons/chart.svg";
 import s from "./welcome.module.scss";
 export const Third = () => {
     return (
         <div class={s.card}>
-            <img class={s.icon} src={chart} />
+            <svg>
+                <use xlinkHref="#chart"></use>
+            </svg>
             <h2>
                 每日提醒
                 <br />

@@ -12,6 +12,10 @@
         justify-content: center;
         padding-top: 66px;
         color: #d4d4ee;
+        > svg {
+            width: 64px;
+            height: 69px;
+        }
     }
     > main {
         flex-grow: 1;
