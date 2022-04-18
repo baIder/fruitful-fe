@@ -1,0 +1,42 @@
+From 3d50747b801c8fbefa77897988f74e6a403d1d9b Mon Sep 17 00:00:00 2001
+From: frankfang <frankfang1990@gmail.com>
+Date: Mon, 18 Apr 2022 22:59:33 +0800
+Subject: [PATCH] =?UTF-8?q?=E5=81=9A=E4=BA=86=E4=B8=80=E4=B8=8B=20TS=20?=
+ =?UTF-8?q?=E4=BD=93=E6=93=8D=EF=BC=8C=E9=94=BB=E7=82=BC=E4=BA=86=E4=B8=80?=
+ =?UTF-8?q?=E4=B8=8B=E5=A4=A7=E8=84=91?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ src/shared/throttle.tsx | 10 ++++++----
+ 1 file changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/src/shared/throttle.tsx b/src/shared/throttle.tsx
+index b45d75d..16f6820 100644
+--- a/src/shared/throttle.tsx
++++ b/src/shared/throttle.tsx
+@@ -1,13 +1,15 @@
+-export const throttle = (fn: Function, time: number) => {
++export const throttle = <T extends ((...args: unknown[]) => any)>(fn: T, time: number) => {
+   let timer: number | undefined = undefined
+-  return (...args: any[]) => {
++  let result: ReturnType<T>
++  return (...args: Parameters<T>) => {
+     if (timer) {
+-      return
++      return result
+     } else {
+-      fn(...args)
++      result = fn(...args)
+       timer = setTimeout(() => {
+         timer = undefined
+       }, time)
++      return result
+     }
+   }
+ }
+\ No newline at end of file
+-- 
+2.37.3
+
