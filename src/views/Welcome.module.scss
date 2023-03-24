@@ -1,0 +1,15 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    > header {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    > main {
+        flex: 1;
+    }
+}
