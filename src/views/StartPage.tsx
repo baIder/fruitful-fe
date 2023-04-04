@@ -29,7 +29,9 @@ export const StartPage = defineComponent({
                         <Button class={s.button}>开始记账</Button>
                     </RouterLink>
                 </div>
-                <FloatButton iconName="add" />
+                <RouterLink to="/items/create">
+                    <FloatButton iconName="add" />
+                </RouterLink>
                 {refOverlayVisible.value && <Overlay onClose={() => (refOverlayVisible.value = false)} />}
             </div>
         );
