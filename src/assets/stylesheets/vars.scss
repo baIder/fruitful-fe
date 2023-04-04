@@ -3,7 +3,8 @@
     --welcome-text: white;
     --welcome-bg-start: #5d33be;
     --welcome-bg-end: #8f4cd7;
-    --z-index-bottom-nav: 10;
+    --z-index-bottom-nav: 8;
+    --z-index-overlay: 16;
     --welcome-nav-height: 64px;
     --welcome-nav-gap: 8px;
     --transition-duration: 0.5s;
@@ -17,4 +18,9 @@
     --navbar-bg-start: var(--welcome-bg-start);
     --navbar-bg-end: var(--welcome-bg-end);
     --navbar-text: white;
+    --overlay-mask-bg: rgba(0, 0, 0, 0.5);
+    --overlay-bg: white;
+    --top-safe-area-height: 24px;
+    --overlay-user-bg: #5c33be;
+    --overlay-user-text: white;
 }
