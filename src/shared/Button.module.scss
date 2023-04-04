@@ -1,7 +1,9 @@
 .button {
-    --button-bg: #5c33be;
-    --button-text: white;
-    --button-font-size: 18px;
-    --button-radius: 8px;
-    --button-height: 48px;
+    border: 1px solid var(--button-bg);
+    padding: 8px 16px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    font-size: var(--button-font-size);
+    border-radius: var(--button-radius);
+    height: var(--button-height);
 }
